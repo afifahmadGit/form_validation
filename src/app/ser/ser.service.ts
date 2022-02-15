@@ -18,6 +18,7 @@ export class SerService {
   del(id: string) {
     return this.http.post('http://localhost:3000/del', { id: id });
   }
+
   find(id: object) {
     return this.http.post('http://localhost:3000/find', id);
   }
@@ -27,4 +28,5 @@ export class SerService {
   debSearch(name:any){
     return this.http.post('http://localhost:3000/debSearch',{name:name})
   }
+  // commit
 }
