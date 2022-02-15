@@ -1,0 +1,74 @@
+<h1>Edit Student Details</h1>
+<div id="formMsg"></div>
+<form>
+  <div id="form">
+    <div class="personalInfo">
+      <h3>Personal details</h3>
+      <div>
+        <div class="lable"><label for="name">Name*</label></div>
+        <div class="input">
+          <input type="text" id="name" formControlName="name" />
+        </div>
+      </div>
+      <div>
+        <div class="lable"><label for="addr">Address</label></div>
+        <div class="input">
+          <input type="text" formControlName="addr" id="addr" />
+        </div>
+      </div>
+      <div>
+        <div class="lable"><label for="contact">Contact*</label></div>
+        <div class="input">
+          <input type="number" formControlName="contact" id="contact" />
+        </div>
+      </div>
+      <h5>Gender</h5>
+      Male:<input type="radio" formControlName="gender" value="male" id="" />
+      Female:
+      <input
+        type="radio"
+        value="female"
+        formControlName="gender"
+        name="gender"
+      />
+    </div>
+    <div class="academics">
+      <div class="subjects">
+        <h3>Select Subjects*</h3>
+        HTML:<input type="checkbox" formControlName="html" id="html" />
+        CSS:<input type="checkbox" formControlName="css" id="css" />
+        JavaScript:
+        <input type="checkbox" formControlName="js" id="js" /> Angular:<input
+          type="checkbox"
+          id="ng"
+          formControlName="ng"
+        />
+      </div>
+      <br />
+      <b>Select Batch* </b>
+      <select name="Batch" formControlName="batch">
+        <!-- <option [selected]="selected" selected>Batches</option> -->
+        <option value="batch A">Batch A</option>
+        <option value="batch B">Batch B</option>
+      </select>
+      <p>
+        <b>Batch A</b> From 7am <br />
+        <b>Batch B</b> From 10am <br />
+      </p>
+    </div>
+    <div class="uploads">
+      <h3>Upload Documents Here</h3>
+      <div>
+        <label for="aadhar">Photo</label>&nbsp;
+        <input type="file" name="" id="aadhar"/>
+        <!-- <input type="file" name="files" accept="image/*" > -->
+      </div>
+      <br />
+      <div>
+        <input type="reset" class="button" value="reset" />&nbsp;
+        <input type="submit" class="button" value="submit" />
+      </div>
+    </div>
+  </div>
+</form>
+

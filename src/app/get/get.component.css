@@ -1,0 +1,17 @@
+*{
+    font-family: 'Segoe UI';
+    font-size: 18px;
+}
+table{
+    border: 2px solid black;
+}
+th:hover{
+    background-color: rgb(140, 156, 170);
+}
+th{
+    padding: 4px 10px;
+}
+.cls{
+    background-color: red;
+    color: blue;
+}

@@ -1,0 +1,41 @@
+<div>
+  <h4>Search Student Here</h4>
+  <input  type="text" [(ngModel)]="search">
+</div>
+<div>
+  <h4>Search Below For Exact Match</h4>
+  <input  type="text" #deb>
+</div>
+<br>
+<table style="width: 100vw">
+  <thead>
+    <th>sr no</th>
+    <th>Student Name</th>
+    <th>Number</th>
+    <th>Address</th>
+    <th>Batch</th>
+    <th>Gender</th>
+    
+    <th>Subjects</th>
+  </thead>
+  <tbody *ngFor="let ele of data | mypipe:search; let i = index ">
+    <td >{{ i + 1 }}</td>
+    <td appTemp>{{ ele.name }}</td>
+    <td>{{ ele.contact }}</td>
+    <td>{{ ele.addr }}</td>
+    <td>{{ ele.batch }}</td>
+    <td>{{ ele.gender }}</td>
+    <td>
+      <span *ngIf="ele.html == true">HTML &nbsp;</span
+      ><span *ngIf="ele.js == true">JS &nbsp;</span
+      ><span *ngIf="ele.ng == true">Angular &nbsp;</span
+      ><span *ngIf="ele.css == true">CSS</span>
+    </td>
+    <!-- <td><button (click)="edit()">Edit</button></td> -->
+    <td>
+      <button (click)="del(ele._id)">Delete</button>
+      <button (click)="find(ele._id)">Update</button>
+      <!-- ethun pathavta yeto ka -->
+    </td>
+  </tbody>
+</table>

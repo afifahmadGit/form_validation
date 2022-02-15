@@ -1,0 +1,18 @@
+<h2 matDialogTitle>Edit Form</h2>
+<mat-dialog-content>
+    <form #form='ngForm' >
+    <input type="text" placeholder="name" [ngModel]='data.name' name="name">
+    <input type="text" placeholder="address" [ngModel]='data.addr' name="addr">
+    <input type="number" placeholder="number" [ngModel]='data.contact' name="contact">
+    <input type="text" placeholder="male/female" [ngModel]='data.gender' name="gender">
+    <input type="text" [ngModel]='data.batch' name="batch"><br><br>
+    <p>Fill True for Selected And false For non-Selected</p>
+    HTML:<input type="text" [ngModel]='data.html' name="html">
+    CSS:<input type="text" [ngModel]='data.css' name="css">
+    JS:<input type="text" [ngModel]='data.js' name="js">
+    <input type="text" [ngModel]='data.ng' name="ng">
+</form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button (click)="submit(form.value)">Submit</button>
+</mat-dialog-actions>

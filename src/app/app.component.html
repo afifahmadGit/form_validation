@@ -1,0 +1,120 @@
+<!-- toolbar -->
+<p style="background-color: rgb(50, 54, 54) ;color: azure;padding: 10px 10px;">
+  <mat-toolbar>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button
+    style="margin:0 10px;"
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+<!-- toolbar endds -->
+
+<h1>Fill Student Details</h1>
+
+
+<div id="formMsg"></div>
+<form [formGroup]="form" (ngSubmit)="submit()" method="get">
+  <div id="form">
+    <div class="personalInfo">
+      <h3>Personal details</h3>
+      <div>
+        <div class="lable"><label for="name">Name*</label></div>
+        <div class="input">
+          <input type="text" placeholder="Name" required id="name" formControlName="name" />
+        </div>
+      </div>
+      <div>
+        <div class="lable"><label for="addr">Address</label></div>
+        <div class="input">
+          <input type="text" formControlName="addr" id="addr" />
+        </div>
+      </div>
+      <div>
+        <div class="lable"><label for="contact">Contact*</label></div>
+        <div class="input">
+          <input type="number" required formControlName="contact" id="contact" />
+        </div>
+      </div>
+      <h5>Gender</h5>
+      Male:<input type="radio" formControlName="gender" value="male" id="" />
+      Female:
+      <input
+        type="radio"
+        value="female"
+        formControlName="gender"
+        name="gender"
+      />
+    </div>
+    <div class="academics">
+      <div class="subjects">
+        <h3>Select Subjects*</h3>
+        HTML:<input type="checkbox" formControlName="html" id="html" />
+        CSS:<input type="checkbox" formControlName="css" id="css" />
+        JavaScript:
+        <input type="checkbox" formControlName="js" id="js" /> Angular:<input
+          type="checkbox"
+          id="ng"
+          formControlName="ng"
+        />
+      </div>
+      <br />
+      <b>Select Batch* </b>
+      <select name="Batch" formControlName="batch">
+        <!-- <option [selected]="selected" selected>Batches</option> -->
+        <option value="batch A">Batch A</option>
+        <option value="batch B">Batch B</option>
+      </select>
+      <p>
+        <b>Batch A</b> From 7am <br />
+        <b>Batch B</b> From 10am <br />
+      </p>
+    </div>
+    <div class="uploads">
+      <h3>Upload Documents Here</h3>
+      <div>
+        <label for="aadhar">Photo</label>&nbsp;
+        <input type="file" name="" id="aadhar" (change)="change($event)" />
+        <!-- <input type="file" name="files" accept="image/*" > -->
+      </div>
+      <br />
+      <div>
+        <input type="reset" class="button" value="reset" />&nbsp;
+        <input type="submit"  [disabled]="!form.valid" class="button" value="submit" />&nbsp;
+        <!-- <button
+          id="btn_update"
+          (click)="update_value(form.value)"
+          style="display: none"
+        >
+          Update
+        </button> -->
+      </div>
+    </div>
+  </div>
+</form>
+<hr />
+<div style="text-align: center">
+  <h1>Students data</h1>
+  <!-- <a routerLink="showDetails" >Get Students</a> -->
+  <app-get [data]="stdData" (oneData)="oneData($event)"></app-get>
+</div>
+<!-- <router-outlet></router-outlet> -->

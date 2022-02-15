@@ -1,0 +1,30 @@
+.personalInfo > div {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.personalInfo > div > div {
+  margin-top: 10px;
+}
+#form {
+  align-content: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+input[type=text].ng-invalid.ng-touched,
+input[type=number].ng-invalid.ng-touched{
+  box-shadow: inset 3px 0px red
+}
+input[type=text].ng-valid,
+input[type=number].ng-valid{
+  box-shadow: inset 3px 0px green
+}
+input:focus::placeholder{
+  color: transparent;
+  
+}
+

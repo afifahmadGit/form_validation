@@ -1,0 +1,16 @@
+*{
+    font-family:'Segoe UI';
+}
+.personalInfo>div{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.personalInfo>div>div{
+    margin-top: 10px;
+}
+#form{
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+}
