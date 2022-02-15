@@ -12,7 +12,7 @@ export class SerService {
     // console.log(res)
     // });  
   }
-//   practice to pull 
+//   practice to pull msg
   count() {
     return this.http.get('http://localhost:3000/std');
   }
