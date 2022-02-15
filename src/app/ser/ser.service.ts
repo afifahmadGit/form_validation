@@ -12,6 +12,7 @@ export class SerService {
     // console.log(res)
     // });  
   }
+//   practice to pull 
   count() {
     return this.http.get('http://localhost:3000/std');
   }
